@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import 'colors_listview.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
 
@@ -46,9 +47,9 @@ bool isLoading = false;
               hint: 'Description',
               maxLines: 5,
             ),
-            // const SizedBox(height: 16,),
-            // const ColorsListView(),
-            // const SizedBox(height: 16,),
+            const SizedBox(height: 16,),
+            const ColorsListView(),
+            const SizedBox(height: 16,),
              CustomButton(
                isLoading: isLoading,
                onPressed: (){},
