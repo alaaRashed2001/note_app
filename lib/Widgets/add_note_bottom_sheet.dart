@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'colors_listview.dart';
 import 'custom_button.dart';
@@ -36,26 +37,26 @@ bool isLoading = false;
       child: SingleChildScrollView(
         child: Column(
           children:  [
-            const SizedBox(height: 32,),
+             SizedBox(height: 32.h,),
             CustomTextField(
               controller: noteEditingController,
               hint: 'Note',
             ),
-            const SizedBox(height: 16,),
+             SizedBox(height: 16.h,),
             CustomTextField(
               controller: descriptionEditingController,
               hint: 'Description',
               maxLines: 5,
             ),
-            const SizedBox(height: 16,),
+             SizedBox(height: 16.h,),
             const ColorsListView(),
-            const SizedBox(height: 16,),
+             SizedBox(height: 16.h,),
              CustomButton(
                isLoading: isLoading,
                onPressed: (){},
                buttonName: 'Save',
              ),
-            const SizedBox(height: 16,),
+             SizedBox(height: 16.h,),
           ],
         ),
       ),

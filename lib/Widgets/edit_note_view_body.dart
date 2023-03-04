@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'custom_appbar.dart';
 import 'custom_text_field.dart';
 import 'edit_note_colors_list.dart';
@@ -40,24 +41,24 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
       child: Column(
         children:  [
 
-          const SizedBox(height: 56,),
+           SizedBox(height: 56.h,),
           const CustomAppBar(
             title: 'Edit Note',
             icon: Icons.check,
           ),
-      const SizedBox(height: 56,),
+       SizedBox(height: 56.h,),
           CustomTextField(
             controller: noteEditingController,
             hint: 'Edit Note',
             maxLines: 1,
           ),
-          const SizedBox(height: 16,),
+           SizedBox(height: 16.h,),
           CustomTextField(
             controller: descriptionEditingController,
             hint: 'Edit Description',
             maxLines: 5,
           ),
-          const SizedBox(height: 16,),
+           SizedBox(height: 16.h,),
           const EditNoteColorsList(),
         ],
       ),

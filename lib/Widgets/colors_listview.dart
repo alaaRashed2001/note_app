@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Const/color.dart';
 import 'color_item.dart';
@@ -21,8 +22,8 @@ int currentIndex = 0;
         scrollDirection: Axis.horizontal,
         itemCount: kColors.length,
         itemBuilder: (context, index) =>  Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 6,
+          padding:  EdgeInsets.symmetric(
+            horizontal: 6.w,
           ),
           child: InkWell(
             onTap: (){

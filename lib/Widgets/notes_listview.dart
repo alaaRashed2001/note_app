@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'note_item.dart';
 
@@ -8,17 +9,17 @@ class NotesListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 16
+      padding:  EdgeInsets.symmetric(
+        vertical: 16.h
       ),
       child: ListView.builder(
         padding: EdgeInsets.zero,
         itemCount: 10,
-          itemBuilder: (context, index) => const Padding(
+          itemBuilder: (context, index) =>  Padding(
             padding: EdgeInsets.symmetric(
-              vertical: 6
+              vertical: 6.h
             ),
-            child: NoteItem(),
+            child: const NoteItem(),
           ),
       ),
     );

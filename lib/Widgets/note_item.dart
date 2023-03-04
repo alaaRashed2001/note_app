@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../Views/edit_note_view.dart';
@@ -20,18 +21,18 @@ class NoteItem extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: const Color(0xFF00BCD4),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               contentPadding: EdgeInsets.zero,
-              title: const Text(
+              title:  Text(
                 'Flutter Tips',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 26,
+                  fontSize: 26.sp,
                 ),
               ),
               subtitle:  Padding(
@@ -40,7 +41,7 @@ class NoteItem extends StatelessWidget {
                   'Build your career with alaa rashed',
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.5),
-                    fontSize: 18,
+                    fontSize: 18.sp,
                   ),
                 ),
               ),
@@ -59,7 +60,7 @@ class NoteItem extends StatelessWidget {
                   'March1 , 2023',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.4),
-                  fontSize: 16
+                  fontSize: 16.sp,
                 ),
             ),
              ),

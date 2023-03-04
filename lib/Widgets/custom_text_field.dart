@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Const/color.dart';
 
@@ -28,7 +29,7 @@ final TextEditingController controller;
 
   OutlineInputBorder buildOutlineInputBorder([color]) {
     return OutlineInputBorder(
-borderRadius: BorderRadius.circular(8),
+borderRadius: BorderRadius.circular(8.r),
         borderSide:  BorderSide(
           color:color?? Colors.white,
         )

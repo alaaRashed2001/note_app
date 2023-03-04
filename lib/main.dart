@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           home: const NoteView(),
           debugShowCheckedModeBanner: false,
-          theme: ThemeData.dark(),
+          theme: ThemeData(
+            brightness: Brightness.dark,
+            fontFamily: 'Poppins'
+          ),
         );
       },
     );

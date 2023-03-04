@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Const/color.dart';
 
@@ -28,9 +29,9 @@ class CustomButton extends StatelessWidget {
             ? const CircularProgressIndicator()
             : Text(
                 buttonName,
-                style:const TextStyle(
+                style: TextStyle(
                   color: Colors.black,
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
