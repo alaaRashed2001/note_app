@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'custom_appbar.dart';
 import 'custom_text_field.dart';
+import 'edit_note_colors_list.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({Key? key}) : super(key: key);
@@ -56,8 +57,8 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             hint: 'Edit Description',
             maxLines: 5,
           ),
-          // const SizedBox(height: 16,),
-          // const EditNoteColorsList(),
+          const SizedBox(height: 16,),
+          const EditNoteColorsList(),
         ],
       ),
     );
