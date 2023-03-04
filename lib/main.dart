@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'DataBase/Colntroller/db_settings.dart';
 import 'Views/note_view.dart';
 
-void main(){
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  /// Database
+  await DbSettings().initDatabase();
 
   /// App
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,10 +26,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           home: const NoteView(),
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            brightness: Brightness.dark,
-            fontFamily: 'Poppins'
-          ),
+          theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
         );
       },
     );
