@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app/Helpers/snackbar.dart';
+import 'package:note_app/Providers/note_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../DataBase/Colntroller/notes_controller.dart';
 import '../Models/note_model.dart';
@@ -88,13 +90,18 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet>
 
   Future<void> performCrateNote() async {
     if (checkData()) {
-      await crateNote();
+      await createNote();
     }
   }
 
-  Future<void> crateNote() async {
+  Future<void> createNote() async {
     var status = await NotesDBController().createNote(note);
     if (status > 0) {
+var newNote = await NotesDBController().showNote(status);
+     if(newNote != null){
+       Provider.of<NoteProvider>(context,listen: false).addNote(newNote);
+     }
+Provider.of<NoteProvider>(context,listen: false).addNote(note);
       showSnackBar(context, message: 'Done ❤', error: false);
       Navigator.of(context).pop();
     } else {

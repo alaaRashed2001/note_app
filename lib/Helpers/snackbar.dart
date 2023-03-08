@@ -5,7 +5,7 @@ mixin SnackBarHelper {
       BuildContext context, {
         required String message,
         required bool error,
-        int duration = 4,
+        int duration = 2,
       }) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
