@@ -17,6 +17,14 @@ class NoteProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Update
+  void updateNote(NoteModel note) {
+    int index = allNotes.indexWhere((element) => element.id == note.id);
+    allNotes.removeAt(index);
+    allNotes.insert(index, note);
+    notifyListeners();
+  }
+
   /// DELETE
   void deleteNote(int id) {
     allNotes.removeWhere((element) => element.id == id);

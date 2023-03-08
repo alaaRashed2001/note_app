@@ -101,7 +101,7 @@ var newNote = await NotesDBController().showNote(status);
      if(newNote != null){
        Provider.of<NoteProvider>(context,listen: false).addNote(newNote);
      }
-Provider.of<NoteProvider>(context,listen: false).addNote(note);
+/// Provider.of<NoteProvider>(context,listen: false).addNote(note);
       showSnackBar(context, message: 'Done ❤', error: false);
       Navigator.of(context).pop();
     } else {
